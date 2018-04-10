@@ -1,0 +1,7 @@
+---
+# tasks file for key_auth
+- name: Set authorized key took from file
+  authorized_key:
+    user: root
+    key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+    state: present

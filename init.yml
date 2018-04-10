@@ -1,0 +1,8 @@
+---
+- hosts: local_test
+  gather_facts: False
+  become: yes
+  become_user: root
+  roles:
+    - cds_cd
+#    - key_auth
