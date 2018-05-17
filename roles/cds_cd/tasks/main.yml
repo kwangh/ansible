@@ -1,2 +1,11 @@
 ---
 # tasks file for cds_cd
+- name: Extract a test.tar.bz2 file into PROJECT_HOME
+  unarchive:
+    src: /etc/ansible/roles/cds_cd/files/test.tar.bz2
+    dest: /root
+    mode: 0644
+    
+# . 이랑 /root/.bashrc가 
+- name: Move files to PROJECT_HOME
+  shell: . /root/.bashrc && mv /root/application $PROOBJECT_HOME
