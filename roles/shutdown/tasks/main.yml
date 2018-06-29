@@ -1,0 +1,7 @@
+---
+# tasks file for shutdown
+- name: Shutdown a host
+  shell: sleep 2 && shutdown -P now
+  async: 1
+  poll: 0
+  ignore_errors: true
